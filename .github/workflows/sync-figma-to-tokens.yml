@@ -17,10 +17,10 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.16.0'
+          node-version: '20.10.0'
 
       - name: Set NPM version
-        run: npm install -g npm@9.5.1
+        run: npm install -g npm
 
       - name: Clone repo
         uses: actions/checkout@v3
