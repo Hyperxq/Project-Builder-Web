@@ -18,14 +18,14 @@ import * as fs from 'fs';
  */
 
 async function main() {
-  if (!process.env['PERSONAL_ACCESS_TOKEN'] || !process.env['FILE_KEY']) {
+  if (!process.env.PERSONAL_ACCESS_TOKEN || !process.env.FILE_KEY) {
     throw new Error(
       'PERSONAL_ACCESS_TOKEN and FILE_KEY environment variables are required',
     );
   }
-  const fileKey = process.env['FILE_KEY'];
+  const fileKey = process.env.FILE_KEY;
 
-  const api = new FigmaApi(process.env['PERSONAL_ACCESS_TOKEN']);
+  const api = new FigmaApi(process.env.PERSONAL_ACCESS_TOKEN);
   const localVariables = await api.getLocalVariables(fileKey);
 
   const tokensFiles = tokenFilesFromLocalVariables(localVariables);

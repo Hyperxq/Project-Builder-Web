@@ -30,7 +30,14 @@ const basePlugins = [
   resolve(),
   terser(),
 ];
-const baseExternal = ["fs", "path", "child_process", "node:module", "dotenv"];
+const baseExternal = [
+  "fs",
+  "path",
+  "child_process",
+  "node:module",
+  "dotenv",
+  "axios",
+];
 
 export default [
   {
