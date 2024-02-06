@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import 'dotenv/config';
 
 import FigmaApi from './figma_api';
@@ -38,6 +39,7 @@ async function main() {
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
   }
+  console.log('hello world!');
 
   Object.entries(tokensFiles).forEach(([fileName, fileContent]) => {
     fs.writeFileSync(

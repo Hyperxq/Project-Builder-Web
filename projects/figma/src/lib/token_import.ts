@@ -1,6 +1,3 @@
-import * as fs from 'fs';
-import * as path from 'path';
-
 import {
   ApiGetLocalVariablesResponse,
   ApiPostVariablesPayload,
@@ -13,6 +10,8 @@ import {
 import { colorApproximatelyEqual, parseColor } from './color.js';
 import { areSetsEqual } from './utils.js';
 import { Token, TokenOrTokenGroup, TokensFile } from './token_types.js';
+import * as path from 'path';
+import * as fs from 'fs';
 
 export type FlattenedTokensByFile = {
   [fileName: string]: {
@@ -78,9 +77,9 @@ function traverseCollection({
   }
 
   if (object.$value !== undefined) {
-    tokens[key] = object;
+    tokens[key] = object as Token;
   } else {
-    Object.entries<TokenOrTokenGroup>(object).forEach(([key2, object2]) => {
+    Object.entries(object).forEach(([key2, object2]) => {
       if (key2.charAt(0) !== '$' && typeof object2 === 'object') {
         traverseCollection({
           key: `${key}/${key2}`,
