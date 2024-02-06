@@ -1,0 +1,23 @@
+{
+  "name": "figma",
+  "version": "0.0.1",
+  "scripts": {
+    "sync-tokens-to-figma": "ts-node-esm -P tsconfig.json src/lib/sync_tokens_to_figma.ts",
+    "sync-figma-to-tokens": "ts-node-esm -P tsconfig.json src/lib/sync_figma_to_tokens.ts"
+  },
+  "peerDependencies": {
+    "@angular/common": "^17.1.0",
+    "@angular/core": "^17.1.0"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.1",
+    "typescript": "~5.3.2"
+  },
+  "sideEffects": false
+}
