@@ -129,13 +129,17 @@ export default class FigmaApi {
   }
 
   async getLocalVariables(fileKey: string) {
-    const resp = await axios.request<ApiGetLocalVariablesResponse>({
-      url: `${this.baseUrl}/v1/files/${fileKey}/variables/local`,
-      headers: {
-        Accept: '*/*',
-        'X-Figma-Token': this.token,
-      },
-    });
+    const resp = await axios
+      .request<ApiGetLocalVariablesResponse>({
+        url: `${this.baseUrl}/v1/files/${fileKey}/variables/local`,
+        headers: {
+          Accept: '*/*',
+          'X-Figma-Token': this.token,
+        },
+      })
+      .catch((err) => {
+        throw err.message;
+      });
 
     return resp.data;
   }

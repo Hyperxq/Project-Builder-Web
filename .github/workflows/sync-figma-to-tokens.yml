@@ -6,6 +6,10 @@ on:
         description: 'The file key of the Figma file to be updated'
         required: true
 
+      personal-access-token:
+        description: 'The file key of the Figma file to be updated'
+        required: true
+
 jobs:
   sync-figma-to-tokens:
     runs-on: ubuntu-latest
@@ -38,7 +42,7 @@ jobs:
         run: cd projects/figma && npm run build && node ../../dist/tokens/sync_figma_to_tokens.js
         env:
           FILE_KEY: ${{ github.event.inputs.file_key }}
-          PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_ACTION_VARIABLES_SYNC_FIGMA_TOKEN }}
+          PERSONAL_ACCESS_TOKEN: ${{ github.event.inputs.personal-access-token }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
