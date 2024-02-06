@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "sync-tokens-to-figma": "npx ts-node-esm -P tsconfig.lib.json src/lib/sync_tokens_to_figma.ts",
-    "sync-figma-to-tokens": "npx ts-node-esm -P tsconfig.lib.json src/lib/sync_figma_to_tokens.ts"
+    "sync-tokens-to-figma": "tsc tsconfig.lib.json --declaration true src/lib/sync_tokens_to_figma.ts",
+    "sync-figma-to-tokens": "ts-node src/lib/sync_figma_to_tokens.ts"
   },
   "peerDependencies": {
     "@angular/common": "^17.1.0",
