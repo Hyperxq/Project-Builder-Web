@@ -4,6 +4,7 @@
   "compilerOptions": {
     "outDir": "../../out-tsc/lib",
     "declaration": true,
+    "esModuleInterop": true,
     "declarationMap": true,
     "inlineSources": true,
     "types": [
@@ -12,5 +13,10 @@
   },
   "exclude": [
     "**/*.spec.ts"
-  ]
+  ],
+  "ts-node": {
+    // Tell ts-node CLI to install the --loader automatically
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }
