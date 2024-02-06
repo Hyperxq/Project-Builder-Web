@@ -1,0 +1,33 @@
+@import 'extende';
+
+:host {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  .waiting-list {
+    display: grid;
+    grid-template-areas:
+    'title video'
+    'copy video';
+
+    &__title {
+      grid-area: title;
+      @include apply-border(10);
+    }
+
+    &__copy {
+      grid-area: copy;
+      @include apply-border(20);
+
+      &__span {
+      }
+    }
+
+    &__video {
+      grid-area: video;
+      @include apply-border(40);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+%temp-section {
+  display: block;
+  border: 3px dashed;
+  min-height: 200px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+@function border-color($seed: 0) {
+  // Ajustar el tono basado en el argumento $seed
+  $hue: 360 * ($seed % 100) / 100; // Asegura un ciclo a través de 360 grados
+  // Genera un color HSL
+  @return hsl($hue, 70%, 50%);
+}
+
+// Mixin para aplicar el borde
+@mixin apply-border($seed: 0) {
+  border: 2px solid border-color($seed);
+}

@@ -4,9 +4,13 @@
 @import 'theme';
 @import 'typography';
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
   justify-content: center;
+  height: 100%;
 }

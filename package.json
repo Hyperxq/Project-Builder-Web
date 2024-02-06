@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "sync-tokens-to-figma": "ts-node-esm -P tsconfig.json src/sync_tokens_to_figma.ts",
+    "sync-figma-to-tokens": "ts-node-esm -P tsconfig.json src/sync_figma_to_tokens.ts",
+    "prepare": "husky install"
   },
   "engines": {
     "node": ">= 20"
