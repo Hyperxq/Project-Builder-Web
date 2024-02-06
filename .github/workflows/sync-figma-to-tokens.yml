@@ -28,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Ts-Node
+        run: npm install ts-node
+
       - name: Sync variables in Figma file to tokens
         run: npm run sync-figma-to-tokens -- --output tokens
         env:
