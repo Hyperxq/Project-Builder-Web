@@ -1,10 +1,12 @@
 @import 'extende';
+@import 'theme';
 
 :host {
   display: grid;
   place-items: center;
   width: 100vw;
   height: 100vh;
+  background: var(--colors-background-bg-primary);
 
   .waiting-list {
     display: grid;

@@ -108,39 +108,6 @@
           }
         }
       }
-    },
-    "figma": {
-      "projectType": "library",
-      "root": "projects/figma",
-      "sourceRoot": "projects/figma/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/figma/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/figma/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/figma/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "tsConfig": "projects/figma/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
-          }
-        }
-      }
     }
   }
 }
