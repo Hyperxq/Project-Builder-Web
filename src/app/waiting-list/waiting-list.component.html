@@ -1,10 +1,40 @@
 <section class="waiting-list">
-  <h1 class="waiting-list__title">Project Builder</h1>
+  <h1 class="waiting-list__title">Project <span>Builder</span></h1>
   <p class="waiting-list__copy">Start your frontend project as fast as
     possible with <span class="waiting-list__copy__span">dynamic templates</span>.</p>
 
-  <video class="waiting-list__video"></video>
+  <!--  <h1 class="waiting-list__title">-->
+  <!--    Project <span>Builder</span>-->
+
+  <!--    <sub> possible with <span class="waiting-list__copy__span">dynamic templates</span>.</sub>-->
+  <!--  </h1>-->
+  <fieldset class="waiting-list__CTA">
+    <input placeholder="mail@hyperxq.com">
+    <button><span>Join waitlist</span>
+      <svg fill="none" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.21484 9.64282H18.2148M18.2148 9.64282L10.2148 1.64282M18.2148 9.64282L10.2148 17.6428"
+              stroke="#D5D9EB" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </svg>
+    </button>
+
+  </fieldset>
+  <section (click)="togglevideo()" class="waiting-list__video">
+    <video #video class="waiting-list__video__tag" muted>
+      <source src="../../assets/media/project-builder-2.mp4" type="video/mp4"/>
+    </video>
+    @if (!videoPlaying) {
+      <div class="waiting-list__video__controls">
+        <svg fill="none" height="49" viewBox="0 0 44 49" width="44" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.833008 5.55402C0.833008 1.76499 4.94573 -0.593621 8.21609 1.31989L40.5965 20.2659C43.8341 22.1602 43.8341 26.8398 40.5965 28.7341L8.21609 47.6801C4.94573 49.5936 0.833008 47.235 0.833008 43.446V5.55402Z"
+            fill="#6941C6"/>
+        </svg>
+      </div>
+    }
+
+  </section>
+
 </section>
 
 
-<button (click)="toggleTheme()">change theme</button>
+<!--<button (click)="toggleTheme()">change theme</button>-->
