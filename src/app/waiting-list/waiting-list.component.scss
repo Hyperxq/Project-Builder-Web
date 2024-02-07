@@ -7,7 +7,7 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(243deg, rgba(16, 24, 40, 0.10) 0.03%, rgba(16, 24, 40, 0.64) 30.27%, #101828 100.55%),
-  url('../../assets/svg/bg-patterns.svg'),
+  url(/assets/svg/bg-patterns.svg),
   var(--colors-background-bg-primary);
   background-origin: content-box;
 
@@ -138,6 +138,8 @@
         height: 59px;
         padding: 0 21px;
 
+        cursor: pointer;
+
         span {
           color: #D5D9EB;
           font-size: 20px;
@@ -145,6 +147,11 @@
           font-weight: 700;
           line-height: normal;
         }
+      }
+
+      button:disabled {
+        background: #03486a;
+        cursor: not-allowed;
       }
     }
   }
