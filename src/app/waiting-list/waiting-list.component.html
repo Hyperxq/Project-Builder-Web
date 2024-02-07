@@ -29,7 +29,9 @@
 
   </form>
   <section (click)="togglevideo()" class="waiting-list__video">
-    <video #video class="waiting-list__video__tag" muted preload="auto">
+    <video #video class="waiting-list__video__tag" muted poster="assets/images/Template-Detail-Page-dark.webp"
+           preload="none">
+      <source src="../../assets/media/project-builder-2.webm" type="video/webm"/>
       <source src="../../assets/media/project-builder-2.mp4" type="video/mp4"/>
     </video>
     @if (!videoPlaying) {

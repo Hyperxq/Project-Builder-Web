@@ -112,7 +112,10 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "buildType": "project-builder-web:build:production"
+          }
         }
       }
     }
